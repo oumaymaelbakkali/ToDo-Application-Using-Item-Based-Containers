@@ -168,4 +168,5 @@ first we will Add a public Getter for the line edit Text to get the description 
   ```
   
   
+  > Excellent job, looking forward to read your second part. Good luck
  
