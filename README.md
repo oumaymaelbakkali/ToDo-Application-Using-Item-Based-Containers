@@ -120,6 +120,52 @@ first we will Add a public Getter for the line edit Text to get the description 
     }
 
   ```
-  ### Delete  task
+  ### Delete Action
+  We use Delete action  for delete an task selected <br/>
+  ```cpp
+   void TaskApp::on_actionDelete_triggered()
+   {
+   QListWidgetItem *it= ui->listWidget->takeItem(mnSelected);
+   QListWidgetItem *it1= ui->listWidget_2->takeItem(mnSelected1);
+   QListWidgetItem *it2= ui->listWidget_3->takeItem(mnSelected2);
+   delete it;
+   delete it1;
+   delete it2;
+   }
+
+    void TaskApp::on_listWidget_currentRowChanged(int currentRow)
+   {
+    mnSelected = currentRow;
+     }
+
+    void TaskApp::on_listWidget_2_currentRowChanged(int currentRow)
+     {
+      mnSelected1 = currentRow;
+      }
+
+      void TaskApp::on_listWidget_3_currentRowChanged(int currentRow)
+     {
+    mnSelected2 = currentRow;
+      }
+```
+  ### QtAbout Action
+  we use this Action for showing a message Box about Qt
+  ```cpp
+     void TaskApp::on_actionAboutQT_triggered()
+    {
+    QMessageBox::aboutQt(this,"AboutQT");
+    }
+  ```
+  ### Quit Action
+  For quit the application
+  ```cpp
+     void TaskApp::on_actionquit_triggered()
+    {
+    this->close();
+
+    }
+    
+  ```
+  
   
  
